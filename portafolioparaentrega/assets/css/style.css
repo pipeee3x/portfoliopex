@@ -1,0 +1,91 @@
+:root {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  --text-ligth: 200;
+  --text-medium: 400;
+  --text-bold: 600;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.body--ligth {
+  --bg: #f0f0f0;
+  --bg-secondary: white;
+  --text: #222;
+
+  --morph1: #ecfd00;
+  --morph2: #890064;
+
+}
+
+.body--dark {
+  --bg: #070732;
+  --bg-secondary: black;
+  --text: #f0f0f0;
+
+  --morph1: #ff1f1f;
+  --morph2: #00eeff;
+}
+
+.body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  max-width: 100%;
+  --white: #f0f0f0;
+  height: auto;
+  position: relative;
+}
+
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+::-webkit-scrollbar-button:increment,
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--morph1), var(--morph2));
+  filter: blur(50px);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--bg);
+}
+
+
+::selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+#progress {
+  height: 2px;
+  background-color: var(--text);
+  position: fixed;
+  top: 6vh;
+  left: 0;
+  z-index: 10;
+}
